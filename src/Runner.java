@@ -1,31 +1,31 @@
 public class Runner {
     public static void main(String[] args) {
         Car[] cars = new Car[]{
-                new Car( "Fiat", "500L", 2017, "Black", 3000, "BM6452BA"),
-                new Car( "Fiat", "124 Spider", 2016, "Blue", 7000, "AX7452AC"),
-                new Car( "Nissan", "GT-R", 2014, "Red", 12000, "AA8732AC"),
-                new Car( "Skoda", "Fabia", 2015, "Red", 4000, "AI2342AC"),
-                new Car( "Nissan", "Frontier Crew", 2016, "Blue", 5000, "AM8831AC"),
-                new Car( "Fiat", "500L", 2012, "Black", 2500, "AX1152BA")
+                new Car( "Toyota", "RAV4", 2015, "Red", 5000, "AA1111BB"),
+                new Car( "Toyota", "Camry", 2020, "Black", 7000, "AA8888CC"),
+                new Car( "Audi", "TT", 2018, "Green", 10000, "AA7777СС"),
+                new Car( "Opel", "Astra", 2010, "Red", 1000, "II3333CC"),
+                new Car( "Audi", "Q7", 2015, "Blue", 8000, "AA7777PP"),
+                new Car( "Opel", "Vectra A", 2015, "Yellow", 3100, "AX0202BB")
         };
 
         CarProcessor carProcessor = new CarProcessor(cars);
-        System.out.println("Cars brand 'Nissan':");
-        carProcessor.findCarByBrand("Nissan");
-        System.out.println("\nCars by model 'Fabia' and more than 3 year in operation:");
-        carProcessor.findCarByModel("Fabia", 3);
-        System.out.println("\nCars made in 2012 and price more than 2000:");
-        carProcessor.findCarByYear(2012, 2000);
+        System.out.println("Cars brand 'Toyota':");
+        carProcessor.findCarByBrand("Toyota");
+        System.out.println("\nCars by model 'TT' and more than 2 year in operation:");
+        carProcessor.findCarByModel("TT", 2);
+        System.out.println("\nCars made in 2015 and price more than 4000:");
+        carProcessor.findCarByYear(2015, 4000);
 
         System.out.println();
 
         CarProcessor carProcessorDefault = new CarProcessor();
-        System.out.println("Cars brand 'Fiat':");
-        carProcessorDefault.findCarByBrand(cars, "Fiat");
-        System.out.println("\nCars by model '500L and more than 4 year in operation:");
-        carProcessorDefault.findCarByModel(cars, "500L", 4);
-        System.out.println("\nCars made in 2016 and price more than 6000$:");
-        carProcessorDefault.findCarByYear(cars, 2016, 6000);
+        System.out.println("Cars brand 'Opel':");
+        carProcessorDefault.findCarByBrand(cars, "Opel");
+        System.out.println("\nCars by model Astra and more than 5 year in operation:");
+        carProcessorDefault.findCarByModel(cars, "Astra", 5);
+        System.out.println("\nCars made in 2020 and price more than 6000$:");
+        carProcessorDefault.findCarByYear(cars, 2020, 6000);
     }
 }
 

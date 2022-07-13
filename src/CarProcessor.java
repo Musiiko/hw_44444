@@ -4,6 +4,7 @@ public class CarProcessor {
     public CarProcessor(Car[] array) {
         this.array = array;
     }
+
     public CarProcessor() {
         array = new Car[]{};
     }
@@ -27,7 +28,7 @@ public class CarProcessor {
     public void findCarByModel(String model, int year) {
         if (!isEmpty()) {
             for (Car car : array) {
-                int yearInWork = 2019 - car.year;
+                int yearInWork = 2022 - car.year;
                 if (car.model.equals(model) && yearInWork >= year) {
                     print(car);
                 }
@@ -48,6 +49,7 @@ public class CarProcessor {
             System.out.println("Array is empty!");
         }
     }
+
     public void findCarByBrand(Car[] cars, String mark) {
         for (Car car : cars) {
             if (car.brand.equals(mark)) {
@@ -58,7 +60,7 @@ public class CarProcessor {
 
     public void findCarByModel(Car[] cars, String model, int year) {
         for (Car car : cars) {
-            int yearInWork = 2019 - car.year;
+            int yearInWork = 2022 - car.year;
             if (car.model.equals(model) && yearInWork >= year) {
                 print(car);
             }
